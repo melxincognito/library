@@ -1,23 +1,24 @@
 
-var divForm = document.getElementById("form")
-var submitButton = document.getElementById("sbtn")
+
+var submitButton = document.getElementById("sbtn");
 
 let myLibrary = []
 
 function Book(title, author, pages, read) {
-    this.title = title 
-    this.author = author 
-    this.pages = pages 
-    this.read = read 
+    this.title = title; 
+    this.author = author; 
+    this.pages = pages; 
+    this.read = read; 
     this.info = function() {
         console.log(title + ", by " + author + ", is " + pages + " pages long, this book is " + read)
     }
     
 }
 
+
 function addToBookLibrary(addNewBook) {
     new Book(title, author, pages, read);
-    myLibrary.push(addNewBook)
+    myLibrary.push(addNewBook);
 }
 
 
@@ -46,11 +47,13 @@ function addNewBook(title, author, pages, read) {
     hasRead.name = "have you read it? (Y/N)";
     form.appendChild(hasRead);
 
-    divForm.appendChild(form)
-
+    document.getElementById('forma').appendChild(form)
 
 } 
 
+submitButton.addEventListener('click', () => {
+
+})
 
 
 

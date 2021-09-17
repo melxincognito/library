@@ -1,0 +1,46 @@
+
+body {
+    background-color: purple
+
+}
+
+
+h1 {
+    font-family: lobster; 
+    font-size: 40px;
+    padding: 20px;
+    display: flex; 
+    margin: auto;
+    justify-content: center;
+    color: rgb(255, 160, 35);
+
+}
+
+button {
+    display: flex;
+    font-family: lobster;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: auto;
+    background-color: rgb(255, 160, 35);
+    color: black;
+    
+}
+
+#sbtn {
+    display: flex;
+    font-family: lobster;
+    font-size: 20px;
+    padding: 15px;
+    margin: auto; 
+    background-color: black;
+    color: rgb(255, 160, 35); 
+}
+
+
+
+
+
+
+
+
