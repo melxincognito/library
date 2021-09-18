@@ -38,7 +38,10 @@ button {
 }
 
 
-
+#myLibrary {
+    display: flex;
+    justify-content: center;
+}
 
 
 

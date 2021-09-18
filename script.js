@@ -1,30 +1,6 @@
 
-
-
-var addBook = document.getElementById("addBtn");
-
 let myLibrary = [];
-
-addBook.addEventListener('click', () => {
-    addTheBook()
-})
-
-
-function createForm() {
-    var forma = document.createElement("form");
-    forma.setAttribute("method", "post");
-    forma.setAttribute("action", "submit.php"); 
-
-    var name = document.createElement("input");
-    name.setAttribute("type", "text");
-    name.setAttribute("name", "FullName");
-    name.setAttribute("placeholder", "Full Name");
-
-    forma.appendChild(name)
-
-    document.getElementsByTagName("body")[0].appendChild(forma)
-}
-
+var addBook = document.getElementById("addBtn");
 
 
 function Book(title, author, pages, read) {
@@ -47,11 +23,12 @@ function addToBookLibrary(addNewBook) {
 
 
 
-
 function addTheBook(title, author, pages, read) {
     var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", "submit.php");
+
+    var br = document.createElement("br")
 
     var title = document.createElement("input");
     title.setAttribute("title", "BookTitle");
@@ -69,15 +46,30 @@ function addTheBook(title, author, pages, read) {
     read.setAttribute("read", "HasRead");
     read.setAttribute("placeholder", "Have you read it yet? (Y/N)");
 
+    var submit = document.createElement("input")
+    submit.setAttribute("type", "submit")
+    submit.setAttribute("value", "Submit")
+
     form.appendChild(title);
+    form.appendChild(br.cloneNode())
     form.appendChild(author);
+    form.appendChild(br.cloneNode())
     form.appendChild(pages);
+    form.appendChild(br.cloneNode())
     form.appendChild(read);
+    form.appendChild(br.cloneNode())
+    form.appendChild(submit)
+
+    
 
     document.getElementById("myLibrary").appendChild(form);
-
+    
 
 }
+
+addBook.addEventListener('click', () => {
+    addTheBook()
+})
 
 
 
@@ -85,9 +77,3 @@ function addTheBook(title, author, pages, read) {
 
 // myLibrary.push(theHobbit)
 
-
-
-
-function openForm() {
-    addNewBook().display("block")
-}
