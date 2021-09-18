@@ -1,8 +1,31 @@
 
 
-var submitButton = document.getElementById("sbtn");
 
-let myLibrary = []
+var addBook = document.getElementById("addBtn");
+
+let myLibrary = [];
+
+addBook.addEventListener('click', () => {
+    addTheBook()
+})
+
+
+function createForm() {
+    var forma = document.createElement("form");
+    forma.setAttribute("method", "post");
+    forma.setAttribute("action", "submit.php"); 
+
+    var name = document.createElement("input");
+    name.setAttribute("type", "text");
+    name.setAttribute("name", "FullName");
+    name.setAttribute("placeholder", "Full Name");
+
+    forma.appendChild(name)
+
+    document.getElementsByTagName("body")[0].appendChild(forma)
+}
+
+
 
 function Book(title, author, pages, read) {
     this.title = title; 
@@ -22,45 +45,49 @@ function addToBookLibrary(addNewBook) {
 }
 
 
-function addNewBook(title, author, pages, read) {
+
+
+
+function addTheBook(title, author, pages, read) {
     var form = document.createElement("form");
-    var addTitle = document.createElement("input");
-    var addAuthor = document.createElement("input");
-    var addPages = document.createElement("input");
-    var hasRead = document.createElement("input");
-    
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "submit.php");
 
-    addTitle.value = title;
-    addTitle.type = Text; 
-    addTitle.name = "title";
-    form.appendChild(addTitle);
+    var title = document.createElement("input");
+    title.setAttribute("title", "BookTitle");
+    title.setAttribute("placeholder", "Book Title");
 
-    addAuthor.value = author;
-    addAuthor.name = "author";
-    form.appendChild(addAuthor);
+    var author = document.createElement("input");
+    author.setAttribute("author", "BookAuthor");
+    author.setAttribute("placeholder", "author");
 
-    addPages.value = pages;
-    addPages.name = "number of pages";
-    form.appendChild(addPages)
+    var pages = document.createElement("input");
+    pages.setAttribute("pages", "PageNumber");
+    pages.setAttribute("placeholder", "Number of pages")
 
-    hasRead.value = read 
-    hasRead.name = "have you read it? (Y/N)";
-    form.appendChild(hasRead);
+    var read = document.createElement("input");
+    read.setAttribute("read", "HasRead");
+    read.setAttribute("placeholder", "Have you read it yet? (Y/N)");
 
-    document.getElementById('forma').appendChild(form)
+    form.appendChild(title);
+    form.appendChild(author);
+    form.appendChild(pages);
+    form.appendChild(read);
 
-} 
+    document.getElementById("myLibrary").appendChild(form);
 
-submitButton.addEventListener('click', () => {
 
-})
+}
 
 
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "295", "not read yet")
+// const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "295", "not read yet")
 
-myLibrary.push(theHobbit)
+// myLibrary.push(theHobbit)
 
 
 
 
+function openForm() {
+    addNewBook().display("block")
+}
