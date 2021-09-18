@@ -43,22 +43,30 @@ function addTheBook(title, author, pages, read) {
     pages.setAttribute("placeholder", "Number of pages")
 
     var read = document.createElement("input");
-    read.setAttribute("read", "HasRead");
-    read.setAttribute("placeholder", "Have you read it yet? (Y/N)");
+    read.type = "checkbox";
+    read.id = "hasRead"
 
-    var submit = document.createElement("input")
-    submit.setAttribute("type", "submit")
-    submit.setAttribute("value", "Submit")
+    var label = document.createElement('label');
+    label.htmlFor = "hasRead";
+    label.appendChild(document.createTextNode("Have you read it?"))
+
+
+
+
+    var submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Submit");
 
     form.appendChild(title);
-    form.appendChild(br.cloneNode())
+    form.appendChild(br.cloneNode());
     form.appendChild(author);
-    form.appendChild(br.cloneNode())
+    form.appendChild(br.cloneNode());
     form.appendChild(pages);
-    form.appendChild(br.cloneNode())
+    form.appendChild(br.cloneNode());
     form.appendChild(read);
-    form.appendChild(br.cloneNode())
-    form.appendChild(submit)
+    form.appendChild(label)
+    form.appendChild(br.cloneNode());
+    form.appendChild(submit);
 
     
 
