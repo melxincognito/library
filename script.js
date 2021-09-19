@@ -1,8 +1,10 @@
 
 let myLibrary = [];
 var addBook = document.getElementById("addBtn");
+var logIn = document.getElementById("logIn")
 var bookContainer = document.getElementById("bookCards");
 var modal = document.getElementById('modal');
+var logInModal = document.getElementById('logInModal')
 var spain = document.getElementsByClassName("close")[0];
 
 
@@ -14,16 +16,21 @@ spain.onclick = function() {
     modal.style.display = "none";
 }
 
+logIn.onclick = function() {
+    logInModal.style.display = "block";
+}
+
+window.onclick = function(event) {
+    if (event.target == logInModal) {
+      logInModal.style.display = "none";
+    }
+}
+
 
 const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "295", "not read yet")
 
 myLibrary.push(theHobbit)
 
-myLibrary.forEach(book => {
-    JSON.stringify(myLibrary)
-    bookContainer.innerHTML += book
-
-})
 
 
 

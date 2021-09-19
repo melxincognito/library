@@ -7,7 +7,19 @@
 
         <h1> Mel's Library </h1> 
 
-        <button> Log in </button>
+        <form>
+            <input id='logIn' type='button' value='Log in'>
+        </form>
+        <div id=logInModal class='modal'>
+            <div class='modalContent'>
+                <p> Log in to your account</p>
+                <input type="text" placeholder="username">
+                <br>
+                <input type="text" placeholder="password">
+            </div>
+
+        </div>
+
 
     </header>
     <body>
@@ -22,6 +34,7 @@
         <div id="modal" class="modal">
             <div class="modalContent">
                 <span class="close">X</span>
+                <p> Add a new book to my library </p>
                 <input type="text" placeholder="Book Title">
                 <br>
                 <input type="text" placeholder="Author">
@@ -30,9 +43,8 @@
                 <br>
                 <label> Have you read it? </label>
                 <input type="checkbox"> 
-                <br>
+                <br><br>
                 <input type='submit'>
-                
 
             </div>
         </div>

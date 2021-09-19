@@ -16,7 +16,13 @@ h1 {
 
 }
 
-button {
+p {
+    font-family: lobster;
+}
+
+
+
+#logIn {
     display: flex;
     font-family: lobster;
     font-size: 14px;
@@ -44,7 +50,7 @@ button {
     padding: 30px;
 }
 
-.modal {
+.modal, .logInModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -57,12 +63,13 @@ button {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
 
-.modalContent {
-    background-color: #fefefe;
+.modalContent, .logInModal {
+    background-color: rgb(255, 160, 35);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border: 1px solid black;
+    width: 30%; /* Could be more or less, depending on screen size */
+    
   }
 
 .close {
