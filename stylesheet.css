@@ -80,6 +80,27 @@ p {
   }
 
 #bookCards {
-    display: flex
+    display: flex;
+    margin: auto;
 
+}
+
+.bookCard {
+    display: grid;
+    font-family: lobster;
+    margin: 10px;
+    background-color: rgb(255, 160, 35);
+    width: 190px;
+    justify-content: center;
+    border: solid;
+    border-color: white;
+
+}
+
+.dltBtn {
+    background-color: black;
+    color: white;
+    width: 50px;
+    margin-bottom: 5px;
+    
 }
