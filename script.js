@@ -57,8 +57,6 @@ function addToBookLibrary(addNewBook) {
 }
 
 
-
-
 Book.prototype.makeCard = function() {
     const bookCard = document.createElement('div');
 
@@ -77,11 +75,9 @@ Book.prototype.makeCard = function() {
     bookContainer.appendChild(bookCard)
 }
 
+myLibrary.forEach((Book) => {
+    Book.makeCard()
+})
 
 
 
-
-for (var i = 0; i < myLibrary.length; i++) {
-    const books = Object.assign(...myLibrary.map())
-
-}
