@@ -1,8 +1,15 @@
+html {
+    height: 100%;
+}
 
 body {
-    background-color: purple
-
+    background-image: linear-gradient(260deg, rgb(155, 24, 155),rgb(192, 62, 84), rgb(255, 168, 53) , rgb(255, 255, 107));
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 
 
 h1 {
@@ -12,13 +19,20 @@ h1 {
     display: flex; 
     margin: auto;
     justify-content: center;
-    color: rgb(255, 160, 35);
+    color: white;
 
 }
 
-p {
+p, label {
     font-family: lobster;
 }
+
+input {
+    padding: 15px;
+    font-family: lobster;
+    background-color:rgba(243, 131, 146, 0.596)
+}
+
 
 
 
@@ -28,8 +42,10 @@ p {
     font-size: 14px;
     padding: 10px;
     margin-left: auto;
+    margin-right: 40px;
     background-color: rgb(255, 160, 35);
-    color: black;
+    color: white;
+    border-radius: 25px;
     
 }
 
@@ -39,15 +55,18 @@ p {
     font-size: 20px;
     padding: 15px;
     margin: auto; 
-    background-color: black;
-    color: rgb(255, 160, 35); 
+    background-color: rgb(255, 160, 35);
+    color: white; 
+    border-radius: 25px;
 }
 
 
 #myLibrary {
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     padding: 30px;
+    flex-wrap: wrap;
 }
 
 .modal, .logInModal {
@@ -64,13 +83,18 @@ p {
   }
 
 .modalContent, .logInModal {
-    background-color: rgb(255, 160, 35);
+    background-color: rgba(255, 226, 64, 0.952);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid black;
-    width: 30%; /* Could be more or less, depending on screen size */
+    border: 1px solid white;
+    width: 20%; /* Could be more or less, depending on screen size */
+    display: grid;
+    align-content: center;
+    border-radius: 25px;
     
+
   }
+
 
 .close {
     color: #aaa;
@@ -79,28 +103,42 @@ p {
     font-weight: bold;
   }
 
+
 #bookCards {
     display: flex;
     margin: auto;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .bookCard {
     display: grid;
     font-family: lobster;
-    margin: 10px;
-    background-color: rgb(255, 160, 35);
-    width: 190px;
-    justify-content: center;
-    border: solid;
-    border-color: white;
+    margin-left: 40px;
+    padding-left: 10px;
+    background-color: rgba(190, 78, 125, 0.829);
+    color: white;
+    min-width: 200px;
+    max-width: auto;
+    justify-content: left;
+    border: solid white;
+    opacity: 90%;
+    border-radius: 25px;
 
 }
 
+.finishedTxt {
+    text-decoration: underline;
+}
+
 .dltBtn {
-    background-color: black;
+    background-color: rgb(150, 93, 116);
     color: white;
     width: 50px;
-    margin-bottom: 5px;
+    margin: 10px 10px ;
+    font-size: 8px;
+    border-radius: 25px;
     
 }
