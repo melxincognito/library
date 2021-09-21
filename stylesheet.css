@@ -83,8 +83,8 @@ input {
 
 .modalContent, .logInModal {
     background-color: rgba(184, 84, 126, 0.733);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 10px;
     font-size: 20px;
     border: 1px solid white;
     width: 20%; /* Could be more or less, depending on screen size */
@@ -92,17 +92,16 @@ input {
     justify-content: center;
     border-radius: 25px;
     
-
   }
 
 
+
 .close {
-    color: #aaa;
+    color: white;
     float: right;
     font-size: 15px;
     font-weight: bold;
   }
-
 
 
 #bookCards {
