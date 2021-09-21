@@ -36,12 +36,13 @@
             <div class="modalContent">
                 <span class="close">X</span>
                 <p> Add a new book to my library </p>
-                <input type="text" placeholder="Book Title" id='title' required>
-                <br>
-                <input type="text" placeholder="Author" id='author'>
-                <br>
-                <input type="text" placeholder="Number of pages" id='pages'>
-                <br>
+                <form class='newBookForm'>
+                    <input type="text" placeholder="Book Title" id='title' required />
+                    <br>
+                    <input type="text" placeholder="Author" id='author' required />
+                    <br>
+                    <input type="text" placeholder="Number of pages" id='pages' required />
+                    <br>
                 <div> 
                 
                     <input type="checkbox" id="isRead"> 
@@ -49,7 +50,7 @@
                 </div>
                 <br><br>
                 <input type='submit' id='submit'>
-
+            </form>
             </div>
         </div>
 

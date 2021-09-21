@@ -30,9 +30,9 @@ p, label {
 input {
     padding: 15px;
     font-family: lobster;
-    background-color:rgba(243, 131, 146, 0.596)
+    background-color:rgba(243, 131, 146, 0.596);
+    border-radius: 25px;
 }
-
 
 
 
@@ -43,7 +43,7 @@ input {
     padding: 10px;
     margin-left: auto;
     margin-right: 40px;
-    background-color: rgb(255, 160, 35);
+    background-color: rgb(255, 160, 35, 0.849);
     color: white;
     border-radius: 25px;
     
@@ -55,7 +55,7 @@ input {
     font-size: 20px;
     padding: 15px;
     margin: auto; 
-    background-color: rgb(255, 160, 35);
+    background-color: rgba(255, 160, 35, 0.849);
     color: white; 
     border-radius: 25px;
 }
@@ -83,9 +83,10 @@ input {
   }
 
 .modalContent, .logInModal {
-    background-color: rgba(255, 226, 64, 0.952);
+    background-color: rgba(184, 84, 126, 0.733);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
+    font-size: 20px;
     border: 1px solid white;
     width: 20%; /* Could be more or less, depending on screen size */
     display: grid;
@@ -118,7 +119,7 @@ input {
     font-family: lobster;
     margin-left: 40px;
     padding-left: 10px;
-    background-color: rgba(190, 78, 125, 0.829);
+    background-color: rgba(51, 43, 46, 0.63);
     color: white;
     min-width: 200px;
     max-width: auto;
