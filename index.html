@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="stylesheet.css">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-        <h1> Mel's Library </h1> 
+        <h1> Library </h1> 
 
         <form>
             <input id='logIn' type='button' value='Log In'>
@@ -28,20 +28,16 @@
             <input id='addBtn' type='button' value='Add Book'>
         </form>
         
-        <div id='myLibrary'>
-
-        </div>
-
         <div id="modal" class="modal">
             <div class="modalContent">
                 <span class="close">X</span>
                 <p> Add a new book to my library </p>
                 <form class='newBookForm' id='newBookForm'>
-                    <input type="text" placeholder="Book Title" id='title' required />
+                    <input type="text" placeholder="Book Title" id='title' required>
                     <br>
-                    <input type="text" placeholder="Author" id='author' required />
+                    <input type="text" placeholder="Author" id='author' required>
                     <br>
-                    <input type="text" placeholder="Number of pages" id='pages' required />
+                    <input type="text" placeholder="Number of pages" id='pages' required>
                     <br>
                 <div> 
                 
@@ -54,9 +50,14 @@
             </div>
         </div>
 
-        <div id="bookCards" class="bookCards"> 
-        
+        <div id="myLibrary">
+            <h2> My Books</h2>
         </div>
+        <div id="bookCards" class="bookCards"> 
+            
+        </div>
+          
+  
 
     </body>
     <footer>

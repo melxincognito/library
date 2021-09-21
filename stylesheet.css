@@ -23,7 +23,7 @@ h1 {
 
 }
 
-p, label {
+p, label, h2 {
     font-family: lobster;
 }
 
@@ -34,7 +34,13 @@ input {
     border-radius: 25px;
 }
 
+#myLibrary {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
 
+}
 
 #logIn {
     display: flex;
@@ -61,13 +67,6 @@ input {
 }
 
 
-#myLibrary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    flex-wrap: wrap;
-}
 
 .modal, .logInModal {
     display: none; /* Hidden by default */
@@ -90,7 +89,7 @@ input {
     border: 1px solid white;
     width: 20%; /* Could be more or less, depending on screen size */
     display: grid;
-    align-content: center;
+    justify-content: center;
     border-radius: 25px;
     
 
@@ -105,29 +104,39 @@ input {
   }
 
 
+
 #bookCards {
     display: flex;
     flex-wrap: wrap;
-    margin: auto; 
     justify-content: left;
-    align-items: center;
+    align-items: left;
+    margin: auto;
+    border: solid black;
+    background-color: rgba(255, 255, 255, 0.384);
+    max-width: 63%;
+    min-height: 70%;
+    max-height: auto;
+    margin-top: 10px;
+   
  
-
 }
 
 .bookCard {
     display: grid;
     font-family: lobster;
-    margin-left: 40px;
+    margin: 33px;
     padding-left: 10px;
     background-color: rgba(51, 43, 46, 0.63);
     color: white;
     min-width: 200px;
     max-width: auto;
+    min-height: 300px;
+    max-height: 310px;
     justify-content: left;
     border: solid white;
     opacity: 90%;
     border-radius: 25px;
+    
 
 }
 
