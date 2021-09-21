@@ -72,35 +72,17 @@ myLibrary.forEach((Book) => {
 });
 
 
-
-
-Book.prototype.getUserInput = function() {
-    this.title = document.getElementById('title').value;
+function getUserInput() {
+    title = document.getElementById('title').value;
     var author = document.getElementById('author').value;
     var pages = document.getElementById('pages').value;
 
     var newBook = new Book(title, author, pages)
-    //alert(JSON.stringify(newBook))
+    alert(JSON.stringify(newBook))
 
 
 
 }
-
-
-
-
-
-
-function addLibro(e) {
-    e.preventDefault();
-    const newBook = getUserInput()
-    myLibrary.push(newBook)
-
-}
-
-
-
-
 
 
 
@@ -108,12 +90,6 @@ function alertTitle() {
     var titleInput = document.getElementById('title').value;
     alert(titleInput)
 }
-
-submitBtn.addEventListener('click', () => {
-    getUserInput();
-})
-
-
 
 
 // event listeners 
@@ -138,12 +114,8 @@ window.onclick = function(event) {
     }
 }
 
-// Library logic 
 
+submitBtn.onclick = function() {
+    getUserInput()
 
-
-
-
-// display logic 
-
-
+}
