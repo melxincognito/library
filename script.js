@@ -63,13 +63,9 @@ Book.prototype.makeCard = function() {
     bookContainer.appendChild(bookCard);
 }
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "295")
 const meli = new Book("Mel Incognito", "Mel", "33")
 
 
-
-
-myLibrary.push(theHobbit)
 myLibrary.push(meli)
 
 
@@ -115,6 +111,7 @@ window.onclick = function(event) {
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
+    modal.style.display = "none";
     getUserInput();
     makeNewCards();
 

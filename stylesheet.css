@@ -107,10 +107,11 @@ input {
 
 #bookCards {
     display: flex;
-    margin: auto;
-    overflow: auto;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto; 
+    justify-content: left;
     align-items: center;
+ 
 
 }
 
