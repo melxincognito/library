@@ -20,6 +20,17 @@ function Book(title, author, pages) {
 
 } 
 
+function getUserInput() {
+    title = document.getElementById('title').value;
+    var author = document.getElementById('author').value;
+    var pages = document.getElementById('pages').value;
+
+    var newBook = new Book(title, author, pages)
+    myLibrary.push(newBook)
+    
+}
+
+
 Book.prototype.makeCard = function() {
     const bookCard = document.createElement('div');
     const deleteBtn = document.createElement('button')
@@ -72,17 +83,7 @@ myLibrary.forEach((Book) => {
 });
 
 
-function getUserInput() {
-    title = document.getElementById('title').value;
-    var author = document.getElementById('author').value;
-    var pages = document.getElementById('pages').value;
 
-    var newBook = new Book(title, author, pages)
-    alert(JSON.stringify(newBook))
-
-
-
-}
 
 
 
@@ -115,7 +116,7 @@ window.onclick = function(event) {
 }
 
 
-submitBtn.onclick = function() {
+submitBtn.addEventListener('click', () => {
     getUserInput()
 
-}
+})
