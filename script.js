@@ -7,7 +7,6 @@ var logInModal = document.getElementById('logInModal')
 var spain = document.getElementsByClassName("close")[0];
 var submitBtn = document.getElementById('submit');
 
-
 let myLibrary = [];
 
 function Book(title, author, pages) {
@@ -18,14 +17,15 @@ function Book(title, author, pages) {
 
 } 
 
+
 function getUserInput() {
-    title = document.getElementById('title').value;
+    var title = document.getElementById('title').value;
     var author = document.getElementById('author').value;
     var pages = document.getElementById('pages').value;
 
     var newBook = new Book(title, author, pages)
     myLibrary.push(newBook)
-  
+
 }
 
 
@@ -63,11 +63,14 @@ Book.prototype.makeCard = function() {
     bookContainer.appendChild(bookCard);
 }
 
-const meli = new Book("Mel Incognito", "Mel", "33")
+function resetGrid() {
+    bookContainer.innerHTML = ""
+}
 
-
-myLibrary.push(meli)
-
+function resetForm() {
+    newBookForm.reset()
+    
+}
 
 
 function makeNewCards() {
@@ -75,15 +78,6 @@ function makeNewCards() {
         Book.makeCard();
     });
 }
-
-makeNewCards()
-
-
-function alertTitle() {
-    var titleInput = document.getElementById('title').value;
-    alert(titleInput)
-}
-
 
 // event listeners 
 
@@ -113,6 +107,8 @@ submitBtn.addEventListener('click', (e) => {
 
     modal.style.display = "none";
     getUserInput();
+    resetGrid();
     makeNewCards();
+    document.getElementById('newBookForm').reset()
 
 })
