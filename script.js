@@ -1,5 +1,3 @@
-// UI links
-
 
 var addBook = document.getElementById("addBtn");
 var logIn = document.getElementById("logIn");
@@ -27,7 +25,7 @@ function getUserInput() {
 
     var newBook = new Book(title, author, pages)
     myLibrary.push(newBook)
-    
+  
 }
 
 
@@ -67,24 +65,22 @@ Book.prototype.makeCard = function() {
 
 const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", "295")
 const meli = new Book("Mel Incognito", "Mel", "33")
-const ari = new Book("The Great Puta", "Me", "69")
+
 
 
 
 myLibrary.push(theHobbit)
 myLibrary.push(meli)
-myLibrary.push(ari)
 
 
 
+function makeNewCards() {
+    myLibrary.forEach((Book) => {
+        Book.makeCard();
+    });
+}
 
-myLibrary.forEach((Book) => {
-    Book.makeCard();
-});
-
-
-
-
+makeNewCards()
 
 
 function alertTitle() {
@@ -116,7 +112,10 @@ window.onclick = function(event) {
 }
 
 
-submitBtn.addEventListener('click', () => {
-    getUserInput()
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    getUserInput();
+    makeNewCards();
 
 })
